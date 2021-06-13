@@ -12,7 +12,7 @@
 ------------ TABLE + COLUMNS ------------
 -----------------------------------------
 
-CREATE TABLE mdd.IA_CR_REMAST --a
+CREATE TABLE mdd.IA_CR_REMAST --abbb
 (
 /*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*/    INF VARCHAR2(10), --
     ID1 VARCHAR2(10), --
@@ -36,7 +36,7 @@ CREATE TABLE mdd.IA_CR_REMAST --a
     UPD_PROC_ID VARCHAR2(255)
 );
     comment on column IA_CR_REMAST is
-    'a';
+    'abbb';
     comment on column IA_CR_REMAST.INF is
     '';
     comment on column IA_CR_REMAST.ID1 is
