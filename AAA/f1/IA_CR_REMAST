@@ -1,0 +1,60 @@
+
+------------ Generated from template version: 2 ------------
+------------ Stereotype: Fact(id:1) ------------
+------------ Status: EMPTY ------------
+------------ Responsible person: EMPTY ------------
+------------ Responsible analyst: EMPTY ------------
+------------ Business domain: EMPTY ------------
+------------ Entity type: EMPTY ------------
+------------ Retention strategy: EMPTY ------------
+------------ Partition strategy: EMPTY ------------
+-----------------------------------------
+------------ TABLE + COLUMNS ------------
+-----------------------------------------
+
+CREATE TABLE mdd.IA_CR_REMAST --abbb
+(
+/*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*/    INF VARCHAR2(10), --
+    ID1 VARCHAR2(10), --
+    ID2 VARCHAR2(10), --
+    TYP VARCHAR2(10), --
+    REL VARCHAR2(10), --
+    ANL VARCHAR2(10), --
+    SHR "NUMBER(5,2)", --
+    DEL_FLAG INTEGER,
+    INS_DT DATE,
+    INS_PROC_ID VARCHAR2(255),
+    INT_PROCESS_ID VARCHAR2(255),
+    INT_SNAP_DATE DATE,
+    SNAP_DATE DATE,
+    SNAP_DATE_EFF DATE,
+    SRC_ID VARCHAR2(255),
+    SRC_SYS_ID VARCHAR2(255),
+    SRC_UPD_DT DATE,
+    UPD_DT DATE,
+    UPD_EFF_DT DATE,
+    UPD_PROC_ID VARCHAR2(255)
+);
+    comment on column IA_CR_REMAST is
+    'abbb';
+    comment on column IA_CR_REMAST.INF is
+    '';
+    comment on column IA_CR_REMAST.ID1 is
+    '';
+    comment on column IA_CR_REMAST.ID2 is
+    '';
+    comment on column IA_CR_REMAST.TYP is
+    '';
+    comment on column IA_CR_REMAST.REL is
+    '';
+    comment on column IA_CR_REMAST.ANL is
+    '';
+    comment on column IA_CR_REMAST.SHR is
+    '';
+-----------------------------------------
+----------------- INDEX -----------------
+-----------------------------------------
+-----------------------------------------
+----------------- KEYS ------------------
+-----------------------------------------
+
