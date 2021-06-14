@@ -1,0 +1,37 @@
+
+------------ Generated from template version: 2 ------------
+------------ Stereotype: Fact(id:1) ------------
+------------ Status: EMPTY ------------
+------------ Responsible person: EMPTY ------------
+------------ Responsible analyst: EMPTY ------------
+------------ Business domain: EMPTY ------------
+------------ Entity type: EMPTY ------------
+------------ Retention strategy: EMPTY ------------
+------------ Partition strategy: EMPTY ------------
+-----------------------------------------
+------------ TABLE + COLUMNS ------------
+-----------------------------------------
+
+CREATE TABLE mdd.TAB2 
+(
+/*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*//*[ERROR in Template Processing (21:10)]*/    DEL_FLAG INTEGER,
+    INS_DT DATE,
+    INS_PROC_ID VARCHAR2(255),
+    INT_PROCESS_ID VARCHAR2(255),
+    INT_SNAP_DATE DATE,
+    SNAP_DATE DATE,
+    SNAP_DATE_EFF DATE,
+    SRC_ID VARCHAR2(255),
+    SRC_SYS_ID VARCHAR2(255),
+    SRC_UPD_DT DATE,
+    UPD_DT DATE,
+    UPD_EFF_DT DATE,
+    UPD_PROC_ID VARCHAR2(255)
+);
+-----------------------------------------
+----------------- INDEX -----------------
+-----------------------------------------
+-----------------------------------------
+----------------- KEYS ------------------
+-----------------------------------------
+
