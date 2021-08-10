@@ -1,0 +1,108 @@
+
+    prompt **************** <SCRIPTING HEADER> **************** 
+    prompt Script:     ddl-TAB-TABLE.sql
+    prompt Schema:     user_system
+    prompt Type:       EMPTY
+    prompt Stereotype: Fact(id:1)
+    prompt Object:     TAB
+    prompt User:       
+    prompt analyst:    
+    prompt Date:       Aug 10, 2021, 10:52:33 AM   
+    prompt File:       unknown
+    prompt Description:TABLE 
+    prompt Status:     EMPTY
+    prompt template version:   22 
+    prompt Business domain:    EMPTY 
+    prompt Entity type:        EMPTY 
+    prompt Retention strategy: EMPTY 
+    prompt Partition strategy: EMPTY 
+    prompt **************** </SCRIPTING HEADER> **************** 
+    ------------ Generated from template version: 22 
+    ------------ Stereotype: Fact(id:1) 
+    ------------ Date time: Aug 10, 2021, 10:52:33 AM 
+    ------------ File: ddl-TAB-TABLE.sql
+    ------------ Description: TABLE 
+    ------------ Status: EMPTY
+    ------------ Responsible person: EMPTY
+    ------------ Responsible analyst: EMPTY
+    ------------ Business domain: EMPTY
+    ------------ Entity type: EMPTY
+    ------------ Retention strategy: EMPTY
+    ------------ Partition strategy: snapshot_data
+    ------------ mdd-fact-template.40.ftl / freemarker 2.3.31
+    -------------------------------------------------------------------------------
+    ------------ Comments ---------------------------------------------------------
+    -- Grants
+    -- Virtual columns (in ALTER mode only adding virtual column is supported)
+    -- Rremoving empty lines
+    -- Default values (not formated by a template) are used as are, without any apostrophe handling.
+    -- Apostrophes in Description are replaced with double quotations.
+    -- PK of a history table is derived from PK columns of a base table. It is extended by ,VALID_TO column.
+    -- Column and table comments are made of: name: comment or description.
+    -- INDEX Corrected LOCAL only when partitioning.
+    -------------------------------------------------------------------------------
+ 
+-----------------------------------------
+------------ TABLE + COLUMNS ------------
+-----------------------------------------
+CREATE TABLE TAB --TABLE
+(
+    AAA CHAR, --aaa - aa
+    CCC DATE, --ccc - cc
+    SNAP_DATE DATE, --Snapshot Date
+    INS_DT DATE, --Insert Datetime
+    SRC_SYS_ID VARCHAR2(255), --Source System Identifier
+    UPD_EFF_DT DATE, --Update Effective Date
+    INS_PROC_ID VARCHAR2(255) not null, --Insert Process Identifier
+    INT_PROCESS_ID VARCHAR2(255) not null, --Interface Process Identifier
+    UPD_PROC_ID VARCHAR2(255) not null, --Update Process Identifier
+    SNAP_DATE_EFF DATE, --Snapshot Date Effective
+    SRC_UPD_DT DATE, --Source Update Datetime
+    DEL_FLAG INTEGER, --Deleted Flag
+    INT_SNAP_DATE DATE, --Interface Snapshot Date
+    SRC_ID VARCHAR2(255), --Source Identifier
+    UPD_DT DATE --Update Datetime
+)    partition by list
+        (SNAP_DATE)
+        (partition P_DEFAULT values (DEFAULT));
+-----------------------------------------
+----------------- Defaults --------------
+-----------------------------------------
+alter table TAB modify (INS_DT default sysdate);
+alter table TAB modify (SRC_SYS_ID default 'XNA');
+alter table TAB modify (UPD_EFF_DT default sysdate);
+alter table TAB modify (SRC_UPD_DT default sysdate);
+alter table TAB modify (INT_SNAP_DATE default sysdate);
+alter table TAB modify (SRC_ID default 'XNA');
+alter table TAB modify (UPD_DT default sysdate);
+----------------------------------------------------
+-------------------- oracle comments ---------------
+----------------------------------------------------
+comment on table TAB is 'TABLE';
+comment on column TAB.AAA is 'aaa: aa';
+comment on column TAB.CCC is 'ccc: cc';
+comment on column TAB.SNAP_DATE is 'Snapshot Date';
+comment on column TAB.INS_DT is 'Insert Datetime';
+comment on column TAB.SRC_SYS_ID is 'Source System Identifier';
+comment on column TAB.UPD_EFF_DT is 'Update Effective Date';
+comment on column TAB.INS_PROC_ID is 'Insert Process Identifier';
+comment on column TAB.INT_PROCESS_ID is 'Interface Process Identifier';
+comment on column TAB.UPD_PROC_ID is 'Update Process Identifier';
+comment on column TAB.SNAP_DATE_EFF is 'Snapshot Date Effective';
+comment on column TAB.SRC_UPD_DT is 'Source Update Datetime';
+comment on column TAB.DEL_FLAG is 'Deleted Flag';
+comment on column TAB.INT_SNAP_DATE is 'Interface Snapshot Date';
+comment on column TAB.SRC_ID is 'Source Identifier';
+comment on column TAB.UPD_DT is 'Update Datetime';
+
+-----------------------------------------
+----------------- Constraints -----------
+-----------------------------------------
+alter table TAB ADD constraint CK_TAB_DEL_FLAG check (DEL_FLAG in (1,0));
+--pk1
+alter table TAB ADD constraint PK1 primary key(AAA, BBB, INS_DT, SRC_SYS_ID) using index local ;
+----------------------------------------------------
+---------------- GRANTS ----------------------------
+----------------------------------------------------
+
+ 

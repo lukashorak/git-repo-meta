@@ -1,0 +1,100 @@
+
+    prompt **************** <SCRIPTING HEADER> **************** 
+    prompt Script:     ddl-POK1-TABLE.sql
+    prompt Schema:     user_system
+    prompt Type:       EMPTY
+    prompt Stereotype: Fact(id:1)
+    prompt Object:     POK1
+    prompt User:       
+    prompt analyst:    
+    prompt Date:       Aug 10, 2021, 10:52:33 AM   
+    prompt File:       unknown
+    prompt Description:pok1 
+    prompt Status:     EMPTY
+    prompt template version:   22 
+    prompt Business domain:    EMPTY 
+    prompt Entity type:        EMPTY 
+    prompt Retention strategy: EMPTY 
+    prompt Partition strategy: EMPTY 
+    prompt **************** </SCRIPTING HEADER> **************** 
+    ------------ Generated from template version: 22 
+    ------------ Stereotype: Fact(id:1) 
+    ------------ Date time: Aug 10, 2021, 10:52:33 AM 
+    ------------ File: ddl-POK1-TABLE.sql
+    ------------ Description: pok1 
+    ------------ Status: EMPTY
+    ------------ Responsible person: EMPTY
+    ------------ Responsible analyst: EMPTY
+    ------------ Business domain: EMPTY
+    ------------ Entity type: EMPTY
+    ------------ Retention strategy: EMPTY
+    ------------ Partition strategy: no_partition
+    ------------ mdd-fact-template.40.ftl / freemarker 2.3.31
+    -------------------------------------------------------------------------------
+    ------------ Comments ---------------------------------------------------------
+    -- Grants
+    -- Virtual columns (in ALTER mode only adding virtual column is supported)
+    -- Rremoving empty lines
+    -- Default values (not formated by a template) are used as are, without any apostrophe handling.
+    -- Apostrophes in Description are replaced with double quotations.
+    -- PK of a history table is derived from PK columns of a base table. It is extended by ,VALID_TO column.
+    -- Column and table comments are made of: name: comment or description.
+    -- INDEX Corrected LOCAL only when partitioning.
+    -------------------------------------------------------------------------------
+ 
+-----------------------------------------
+------------ TABLE + COLUMNS ------------
+-----------------------------------------
+CREATE TABLE POK1 --pok1
+(
+    SNAP_DATE DATE, --Snapshot Date
+    INS_DT DATE, --Insert Datetime
+    SRC_SYS_ID VARCHAR2(255), --Source System Identifier
+    UPD_EFF_DT DATE, --Update Effective Date
+    INS_PROC_ID VARCHAR2(255) not null, --Insert Process Identifier
+    INT_PROCESS_ID VARCHAR2(255) not null, --Interface Process Identifier
+    UPD_PROC_ID VARCHAR2(255) not null, --Update Process Identifier
+    SNAP_DATE_EFF DATE, --Snapshot Date Effective
+    SRC_UPD_DT DATE, --Source Update Datetime
+    DEL_FLAG INTEGER, --Deleted Flag
+    INT_SNAP_DATE DATE, --Interface Snapshot Date
+    SRC_ID VARCHAR2(255), --Source Identifier
+    UPD_DT DATE --Update Datetime
+);
+-----------------------------------------
+----------------- Defaults --------------
+-----------------------------------------
+alter table POK1 modify (INS_DT default sysdate);
+alter table POK1 modify (SRC_SYS_ID default 'XNA');
+alter table POK1 modify (UPD_EFF_DT default sysdate);
+alter table POK1 modify (SRC_UPD_DT default sysdate);
+alter table POK1 modify (INT_SNAP_DATE default sysdate);
+alter table POK1 modify (SRC_ID default 'XNA');
+alter table POK1 modify (UPD_DT default sysdate);
+----------------------------------------------------
+-------------------- oracle comments ---------------
+----------------------------------------------------
+comment on table POK1 is 'pok1';
+comment on column POK1.SNAP_DATE is 'Snapshot Date';
+comment on column POK1.INS_DT is 'Insert Datetime';
+comment on column POK1.SRC_SYS_ID is 'Source System Identifier';
+comment on column POK1.UPD_EFF_DT is 'Update Effective Date';
+comment on column POK1.INS_PROC_ID is 'Insert Process Identifier';
+comment on column POK1.INT_PROCESS_ID is 'Interface Process Identifier';
+comment on column POK1.UPD_PROC_ID is 'Update Process Identifier';
+comment on column POK1.SNAP_DATE_EFF is 'Snapshot Date Effective';
+comment on column POK1.SRC_UPD_DT is 'Source Update Datetime';
+comment on column POK1.DEL_FLAG is 'Deleted Flag';
+comment on column POK1.INT_SNAP_DATE is 'Interface Snapshot Date';
+comment on column POK1.SRC_ID is 'Source Identifier';
+comment on column POK1.UPD_DT is 'Update Datetime';
+
+-----------------------------------------
+----------------- Constraints -----------
+-----------------------------------------
+alter table POK1 ADD constraint CK_POK1_DEL_FLAG check (DEL_FLAG in (1,0));
+----------------------------------------------------
+---------------- GRANTS ----------------------------
+----------------------------------------------------
+
+ 

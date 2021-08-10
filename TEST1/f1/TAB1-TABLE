@@ -1,0 +1,82 @@
+
+    prompt **************** <SCRIPTING HEADER> **************** 
+    prompt Script:     ddl-TAB1-TABLE.sql
+    prompt Schema:     user_system
+    prompt Type:       EMPTY
+    prompt Stereotype: Interface(id:15)
+    prompt Object:     TAB1
+    prompt User:       
+    prompt analyst:    
+    prompt Date:       Aug 10, 2021, 10:52:33 AM   
+    prompt File:       unknown
+    prompt Description:tab1 
+    prompt Status:     EMPTY
+    prompt template version:   16 
+    prompt Business domain:    EMPTY 
+    prompt Entity type:        EMPTY 
+    prompt Retention strategy: EMPTY 
+    prompt Partition strategy: EMPTY 
+    prompt **************** </SCRIPTING HEADER> **************** 
+    ------------ Generated from template version: 16 
+    ------------ Stereotype: Interface(id:15) 
+    ------------ Date time: Aug 10, 2021, 10:52:33 AM 
+    ------------ File: ddl-TAB1-TABLE.sql
+    ------------ Description: tab1 
+    ------------ Status: EMPTY
+    ------------ Responsible person: EMPTY
+    ------------ Responsible analyst: EMPTY
+    ------------ Business domain: EMPTY
+    ------------ Entity type: EMPTY
+    ------------ Retention strategy: EMPTY
+    ------------ Partition strategy: no_partition
+    ------------ mdd-fact-template.40.ftl / freemarker 2.3.31
+    -------------------------------------------------------------------------------
+    ------------ Comments ---------------------------------------------------------
+    -- Grants
+    -- Virtual columns (in ALTER mode only adding virtual column is supported)
+    -- Rremoving empty lines
+    -- Default values (not formated by a template) are used as are, without any apostrophe handling.
+    -- Apostrophes in Description are replaced with double quotations.
+    -- PK of a history table is derived from PK columns of a base table. It is extended by ,VALID_TO column.
+    -- Column and table comments are made of: name: comment or description.
+    -- INDEX Corrected LOCAL only when partitioning.
+    -------------------------------------------------------------------------------
+ 
+-----------------------------------------
+------------ TABLE + COLUMNS ------------
+-----------------------------------------
+CREATE TABLE TAB1 --tab1
+(
+    INS_DT DATE, --Insert Datetime
+    UPD_EFF_DT DATE, --Update Effective Date
+    INS_PROC_ID VARCHAR2(255), --Insert Process Identifier
+    INT_PROCESS_ID VARCHAR2(255), --Interface Process Identifier
+    UPD_PROC_ID VARCHAR2(255), --Update Process Identifier
+    UPD_DT DATE, --Update Datetime
+    SRC_UPD_DT DATE, --Source Update Datetime
+    INT_SNAP_DATE DATE --Interface Snapshot Date
+);
+-----------------------------------------
+----------------- Defaults --------------
+-----------------------------------------
+----------------------------------------------------
+-------------------- oracle comments ---------------
+----------------------------------------------------
+comment on table TAB1 is 'tab1';
+comment on column TAB1.INS_DT is 'Insert Datetime';
+comment on column TAB1.UPD_EFF_DT is 'Update Effective Date';
+comment on column TAB1.INS_PROC_ID is 'Insert Process Identifier';
+comment on column TAB1.INT_PROCESS_ID is 'Interface Process Identifier';
+comment on column TAB1.UPD_PROC_ID is 'Update Process Identifier';
+comment on column TAB1.UPD_DT is 'Update Datetime';
+comment on column TAB1.SRC_UPD_DT is 'Source Update Datetime';
+comment on column TAB1.INT_SNAP_DATE is 'Interface Snapshot Date';
+
+-----------------------------------------
+----------------- Constraints -----------
+-----------------------------------------
+----------------------------------------------------
+---------------- GRANTS ----------------------------
+----------------------------------------------------
+
+ 
